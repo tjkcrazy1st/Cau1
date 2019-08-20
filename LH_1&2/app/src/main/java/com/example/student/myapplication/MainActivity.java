@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         txt = (TextView) findViewById(R.id.textView2);
         btn = (Button) findViewById(R.id.button);
+        Button btn2 = (Button) findViewById(R.id.button2);
 
         btn.setOnClickListener(new View.OnClickListener()
         {
@@ -25,6 +26,16 @@ public class MainActivity extends AppCompatActivity {
                 EditText text = (EditText) findViewById(R.id.editText);
                 final String value = text.getText().toString();
                 txt.setText("Xin chào: " + value);
+            }
+        });
+        btn2.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                EditText text = (EditText) findViewById(R.id.editText);
+                final String value = text.getText().toString();
+                txt.setText("Goodbye: " + value);
             }
         });
     }
